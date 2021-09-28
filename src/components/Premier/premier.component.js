@@ -1,90 +1,29 @@
 import React from "react";
 import Slider from "react-slick";
 
-//components
-import Poster from "../Poster/poster.component";
+//component
+import Poster from "./Poster/poster.component";
 
-const Premier = () => {
-  const settings = {
-    infinite: true,
-    autoplay: false,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    InitialSlide: 0
-  };
+//config
+import settings from "../../config/PosterCarousal.config";
 
-  const PremierImages = [
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00312484-ehedpyzcmm-portrait.jpg",
-      alt: "The Balkan Line",
-      title: "The Balkan Line",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00137316-unmwlqfqvd-portrait.jpg",
-      alt: "The Nest",
-      title: "The Nest",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00310648-uwreepnzec-portrait.jpg",
-      alt: "Resistance",
-      title: "Resistance",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00137312-qszmhzktyk-portrait.jpg",
-      alt: "The Secrets We Keep",
-      title: "The Secrets We Keep",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00137455-pxtjxgdyua-portrait.jpg",
-      alt: "Capone(2020)",
-      title: "Capone(2020)",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00302306-xxwtjnexzz-portrait.jpg",
-      alt: "Proximity",
-      title: "Proximity",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00309748-ccphrtpnff-portrait.jpg",
-      alt: "Another Round",
-      title: "Another Round",
-      subtitle: "Danish"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00303783-plktjmqsfm-portrait.jpg",
-      alt: "The Tunnel",
-      title: "The Tunnel",
-      subtitle: "Norwegian"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00137324-urlznggrwz-portrait.jpg",
-      alt: "The Courier(2021)",
-      title: "The Courier",
-      subtitle: "English"
-    },
-    {
-      src: "https://in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:oi-discovery-catalog@@icons@@premiere-icon.png,ox-322,oy-20/et00302293-savbwcehey-portrait.jpg",
-      alt: "Radioactive",
-      title: "Radioactive",
-      subtitle: "English"
-    },
-  ]
+//images
+import PremierImages from "../../config/TempPosters.config";
 
-  return(
-    <>
-    <Slider {...settings} >
-    {PremierImages.map((image) => (
-      <Poster {...image} />
+export const Premier = () => {
+
+
+  return (<>
+    <div className="flex flex-col items-start py-4">
+    <h3 className="text-white text-xl font-bold">Premiers</h3>
+    <p className="text-white text-sm">Brand new release every Friday</p>
+    </div>
+    <Slider {...settings}>
+    {PremierImages.map((image)=> (
+      <Poster {...image} isDark />
     ))}
     </Slider>
-    </>
-  );
+    </>);
 };
 
 export default Premier;

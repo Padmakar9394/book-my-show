@@ -3,6 +3,8 @@ import EntertainmentCardSlider from "../components/Entertainment/Entertainmentca
 import Premier from "../components/Premier/premier.component"
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempPosters from "../config/TempPosters.config";
+import OnlineStreamingPosters from "../config/OnlineStreamingEventsPosters.config";
+import LaughterTherapyPosters from "../config/LaughterTherapyPosters.config";
 
 const HomePage = () => {
   return (
@@ -31,15 +33,15 @@ const HomePage = () => {
 
     <div className="container mx-auto px-4">
     <PosterSlider
-    images={TempPosters}
+    images={OnlineStreamingPosters}
     title="Online Streaming Events"
     isDark={false}
     />
     </div>
     <div className="container mx-auto px-4">
     <PosterSlider
-    images={TempPosters}
-    title="Outdoor Events"
+    images={LaughterTherapyPosters}
+    title="Laughter Therapy"
     isDark={false}
     />
     </div>

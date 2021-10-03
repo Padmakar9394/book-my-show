@@ -7,16 +7,17 @@ export const NextArrow = (props) => {
    <div
    className={props.className}
    style={{ ...props.style,
-      backgroundColor: "rgba(0, 0, 0, 0.4)",
-      height: "50px",
+      backgroundColor: "#333333",
+      height: "40px",
       display: "flex",
-      margin: "-15px",
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
-      width: "45px",
+      width: "40px",
       position: "absolute",
-      borderRadius: "6px 0px 0px 6px"}}
+      borderRadius: "50%",
+      opacity: "0.8"
+    }}
    onClick={props.onClick}
     />
     </>
@@ -29,16 +30,17 @@ export const PrevArrow = (props) => {
    <div
    className={props.className}
    style={{ ...props.style,
-     backgroundColor: "rgba(0, 0, 0, 0.4)",
-     height: "50px",
+     backgroundColor: "#333333",
+     height: "40px",
      display: "flex",
-     margin: "-15px",
      alignItems: "center",
      justifyContent: "center",
      cursor: "pointer",
-     width: "45px",
+     width: "40px",
      position: "absolute",
-     borderRadius: "0px 6px 6px 0px"}}
+     borderRadius: "50%",
+     opacity:"0.8"
+   }}
    onClick={props.onClick}
     />
     </>

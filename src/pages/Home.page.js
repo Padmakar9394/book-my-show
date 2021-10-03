@@ -1,6 +1,6 @@
 import React from "react";
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
-import Premier from "../components/Premier/premier.component"
+import Premier from "../components/Premier/premier.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempPosters from "../config/TempPosters.config";
 import OnlineStreamingPosters from "../config/OnlineStreamingEventsPosters.config";
@@ -16,7 +16,9 @@ const HomePage = () => {
     The best of Entertainment
     </h1>
     </div>
-    <EntertainmentCardSlider />
+    <div className="container mx-auto -mt-5">
+      <EntertainmentCardSlider />
+    </div>
     <div className="bg-navCol-200 py-16">
 
       <div className="container mx-auto px-4">

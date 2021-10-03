@@ -1,4 +1,4 @@
-import {NextArrow, PrevArrow } from ".././components/HeroCarousal/Arrows.component";
+import {NextArrow, PrevArrow } from "./Arrow.config";
 const settings = {
   arrows: true,
   infinite: true,

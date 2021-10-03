@@ -1,8 +1,9 @@
 import React from "react";
 import MovieHero from "../components/MovieHero/MovieHero.component";
-import PosterSlider from "../components/PosterSlider/PosterSlider.component";
-import CastPosters from "../config/CastPosters.config";
 import { BiCameraMovie } from "react-icons/bi";
+import CastPremier from "../components/CastCarousal/CastPremier.component";
+import CrewPremier from "../components/CastCarousal/CrewPremier.component";
+
 const Movie = () => {
 return(
 <>
@@ -28,7 +29,21 @@ return(
       </div>
    </div>
 </div>
-
+<div className="items-start flex flex-col ml-48">
+  <h2 className="font-bold text-gray-800 text-2xl ">Cast</h2>
+  <div className="container mt-4 w-1/2 items-center">
+    <CastPremier />
+  </div>
+</div>
+<div className="mt-3 ml-48 w-3/5">
+   <hr />
+</div>
+<div className="items-start flex flex-col ml-48 mt-4">
+    <h2 className="font-bold text-gray-800 text-2xl ">Crew</h2>
+    <div className="container mt-4 w-1/2 items-center">
+      <CrewPremier />
+    </div>
+</div>
 </>
 );
 };

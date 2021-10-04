@@ -1,16 +1,20 @@
 import React from "react";
 import Slider from "react-slick";
+import {NextArrow, PrevArrow } from "./CastCarousal.config";
 
 //component
 import Poster from "./CastPoster.component";
 
 export const CastPremier = () => {
   const settings = {
+    arrows: true,
     infinite: false,
     autoplay: false,
     slidesToShow: 4,
     slidesToScroll: 3,
-    InitialSlide: 0
+    InitialSlide: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   const MovieCastPosters = [

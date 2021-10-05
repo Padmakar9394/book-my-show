@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 
 //component
-import Poster from "./Poster/poster.component";
+import Poster from "../Poster/poster.component";
 
 //config
 import settings from "../../config/PosterCarousal.config";

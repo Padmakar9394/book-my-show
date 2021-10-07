@@ -53,7 +53,7 @@ const NavLg = () => {
 const MovieNavbar = () => {
   return(
       <>
-      <nav className=" absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative bg-navCol-700">
+      <nav className=" absolute inset-x-0 z-30 bg-opacity-10 backdrop-filter backdrop-blur-lg lg:relative">
       <div className="md:hidden">{
         /*Mobile Screen*/
         <NavSm />
@@ -62,7 +62,7 @@ const MovieNavbar = () => {
         /*Tablet Screen*/
         <NavSm />
       }</div>
-      <div className="hidden lg:flex lg:bg-navCol-700 h-16">{
+      <div className="hidden lg:flex h-16">{
         /*Desktop Screen*/
         <NavLg />
       }</div>

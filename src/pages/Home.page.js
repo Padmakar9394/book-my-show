@@ -1,12 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, {useState, useEffect } from "react";
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
 import Premier from "../components/Premier/premier.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 import TempPosters from "../config/TempPosters.config";
-import OnlineStreamingPosters from "../config/OnlineStreamingEventsPosters.config";
-import LaughterTherapyPosters from "../config/LaughterTherapyPosters.config";
 
 const HomePage = () => {
+
+const [popularMovies, setPopularMovies] = useState([]);
+
+useEffect(() => {
+  const requestPopularMovies = async () =>{
+    const getPopularMovies = await axios.get("/movie/popular");
+    setPopularMovies(getPopularMovies.data.results);
+  };
+  requestPopularMovies();
+},[]);
+
+console.log(popularMovies);
+
   return (
     <>
     <div className="flex flex-col gap-10">
@@ -28,21 +40,21 @@ const HomePage = () => {
           className="w-full h-full"
         />
       </div>
-        <PosterSlider images={TempPosters} title="Premier" subtitle="Brand New Releases Every Friday" isDark />
+        <PosterSlider images={popularMovies} title="Premier" subtitle="Brand New Releases Every Friday" isDark />
       </div>
     </div>
     </div>
 
     <div className="container mx-auto px-4">
     <PosterSlider
-    images={OnlineStreamingPosters}
+    images={popularMovies}
     title="Online Streaming Events"
     isDark={false}
     />
     </div>
     <div className="container mx-auto px-4">
     <PosterSlider
-    images={LaughterTherapyPosters}
+    images={popularMovies}
     title="Laughter Therapy"
     isDark={false}
     />

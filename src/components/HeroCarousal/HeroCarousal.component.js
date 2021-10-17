@@ -53,7 +53,7 @@ return(
   <HeroSlider {...settings}>
   {
     images.map((image) => (
-      <div className="w-full h-64 md:h-80 py-3">
+      <div className="w-full h-64 md:h-80">
       <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
        alt="testing" className="w-full h-full rounded-md" />
       </div>

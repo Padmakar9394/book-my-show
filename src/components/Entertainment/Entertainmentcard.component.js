@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 //components
-import {NextArrow, PrevArrow } from "../../config/Arrow.config";
+import {NextArrow, PrevArrow } from "./EntertainmentArrow";
 
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -42,7 +42,30 @@ const EntertainmentCardSlider = () => {
     slidesToScroll: 2,
     InitialSlide: 0,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   }
 
   return (

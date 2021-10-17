@@ -6,8 +6,8 @@ const settings = {
   slidesToShow: 5,
   slidesToScroll: 2,
   InitialSlide: 0,
-  nextArrow: <nextArrow />,
-  prevArrow: <prevArrow />,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
   responsive: [
     {
       breakpoint: 1024,

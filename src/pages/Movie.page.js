@@ -52,18 +52,18 @@ return(
 
 </div>
 
-<div className="items-start flex flex-col ml-48">
+<div className="items-start flex flex-col w-full lg:ml-48">
   <h2 className="font-bold text-gray-800 text-2xl ">Cast</h2>
-  <div className="container mt-4 w-1/2 items-center">
+  <div className="container mt-4 lg:w-1/2 items-center">
     <CastPremier />
   </div>
 </div>
 <div className="mt-3 ml-48 w-3/5">
    <hr />
 </div>
-<div className="items-start flex flex-col ml-48 mt-4">
+<div className="items-start flex flex-col mt-4  w-full lg:ml-48">
     <h2 className="font-bold text-gray-800 text-2xl ">Crew</h2>
-    <div className="container mt-4 w-1/2 items-center">
+    <div className="container mt-4 w-full lg:w-1/2 items-center">
       <CrewPremier />
     </div>
 </div>

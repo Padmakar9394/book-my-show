@@ -7,9 +7,10 @@ export const NextArrow = (props) => {
    <div
    className={props.className}
    style={{ ...props.style,
-      backgroundColor: "#333333",
+      backgroundColor: "rgba(0, 0, 0, 0.4)",
       height: "30px",
-      marginTop: "-40px",
+      marginTop: "-50px",
+      right: 0,
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -31,9 +32,10 @@ export const PrevArrow = (props) => {
    <div
    className={props.className}
    style={{ ...props.style,
-     backgroundColor: "#333333",
+     backgroundColor: "rgba(0, 0, 0, 0.4)",
      height: "30px",
-     marginTop: "-40px",
+     marginTop: "-50px",
+     left: 0,
      display: "flex",
      alignItems: "center",
      justifyContent: "center",

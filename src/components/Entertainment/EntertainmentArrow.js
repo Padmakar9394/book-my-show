@@ -14,7 +14,6 @@ export const NextArrow = (props) => {
       justifyContent: "center",
       cursor: "pointer",
       width: "40px",
-      marginRight: 0,
       position: "absolute",
       borderRadius: "50%",
       opacity: "0.8"
@@ -38,7 +37,6 @@ export const PrevArrow = (props) => {
      justifyContent: "center",
      cursor: "pointer",
      width: "40px",
-     marginLeft: 0,
      position: "absolute",
      borderRadius: "50%",
      opacity:"0.8"

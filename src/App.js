@@ -1,5 +1,3 @@
-import { Route } from "react-router-dom";
-
 //axios
 import axios from "axios";
 
